@@ -4,8 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Thing;
 
-class SmthSeeder extends Seeder
+class ThingTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +15,6 @@ class SmthSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Thing::factory()->count(100)->create();
     }
 }

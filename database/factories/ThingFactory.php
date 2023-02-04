@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class FakeSmthFactory extends Factory
+class ThingFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,10 @@ class FakeSmthFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=>fake()->name(),
+            'a_date'=>fake()->date(),
+            'a_number'=>fake()->numberBetween(0, 100000),
+            'price'=>fake()->randomFloat(2, 0, 5000),
         ];
     }
 }

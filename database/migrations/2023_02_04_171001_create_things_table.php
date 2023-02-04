@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('smth', function (Blueprint $table) {
+        Schema::create('things', function (Blueprint $table) {
             $table->id();
             $table->string('name', 64)->unique();
             $table->date('a_date');
