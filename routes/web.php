@@ -25,3 +25,6 @@ Route::get('/thing/create', [MainController::class, 'goCreate'])
 
 Route::post('/thing/add', [MainController::class, 'addThing'])
 ->name('thing.add');
+
+Route::get('/thing/delete/{id}', [MainController::class, 'delThing'])
+->name('thing.delete');

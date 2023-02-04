@@ -31,4 +31,10 @@ class MainController extends Controller
         $thing->save();
         return redirect()->route('home');
     }
+
+    public function delThing($id){
+        $thing = Thing::find($id);
+        $thing->delete();
+        return redirect()->route('home');
+    }
 }
