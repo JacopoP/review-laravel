@@ -14,4 +14,14 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/', [MainController::class, 'home']);
+Route::get('/', [MainController::class, 'home'])
+->name('home');
+
+Route::get('/thing/show/{id}', [MainController::class, 'selectThing'])
+->name('thing.show');
+
+Route::get('/thing/create', [MainController::class, 'goCreate'])
+->name('thing.create');
+
+Route::post('/thing/add', [MainController::class, 'addThing'])
+->name('thing.add');
